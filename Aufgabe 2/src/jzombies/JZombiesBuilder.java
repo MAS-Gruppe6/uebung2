@@ -3,7 +3,6 @@ package jzombies;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactory;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder;
-import repast.simphony.context.space.graph.NetworkBuilder;
 import repast.simphony.context.space.grid.GridFactory;
 import repast.simphony.context.space.grid.GridFactoryFinder;
 import repast.simphony.dataLoader.ContextBuilder;
@@ -19,8 +18,6 @@ public class JZombiesBuilder implements ContextBuilder<Object> {
 
 	@Override
 	public Context<Object> build(Context<Object> context) {
-		NetworkBuilder<Object> netBuilder = new NetworkBuilder<>("infection network", context, true);
-		netBuilder.buildNetwork();
 		context.setId("jzombies");
 		ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
 		// Border wurde nun auf strict gesetzt
