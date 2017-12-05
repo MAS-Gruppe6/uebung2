@@ -50,7 +50,8 @@ public class Zombie {
 
 					myPoint, otherPoint);
 
-			space.moveByVector(this, 1, angle, 0);
+			// Roboter läuft etwas langsamer um das Verhalten besser sichtbar zu machen
+			space.moveByVector(this, 0.5, angle, 0);
 
 			myPoint = space.getLocation(this);
 
